@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+     <!-- <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>  --> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  
+  
+  
+  </head>
+  <style>
+    #carouselBasicExample,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item.active
+    {
+      height: 100vh;
+    }
+
+    .carousel-item:nth-child(1){
+      background-image: url("img1.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    .carousel-item:nth-child(2){
+      background-image: url("img2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    
+    .carousel-item:nth-child(3){
+      background-image: url("img3.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+
+    #carouselBasicExample{
+      margin-top: -66.6px;
+
+    }
+    .navbar{
+      z-index: 100 ;
+    }
+
+
+  </style>
+  <body>
+    
+    <header >
+      <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark ">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <p>Sevak -India</p>
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Projects</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+      <a class="text-white me-3" href="#">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+
+      <!-- Notifications -->
+      <div class="dropdown">
+        <a
+          class="text-white me-3 dropdown-toggle hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bell"></i>
+          <span class="badge rounded-pill badge-notification bg-danger">1</span>
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuLink"
+        >
+          <li>
+            <a class="dropdown-item" href="#">Some news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Another news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Avatar -->
+      <div class="dropdown">
+        <a
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuAvatar"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+            class="rounded-circle"
+            height="25"
+            alt="Black and White Portrait of a Man"
+            loading="lazy"
+          />
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuAvatar"
+        >
+          <li>
+            <a class="dropdown-item" href="#">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+
+      <!-- Carousel wrapper -->
+<div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-mdb-target="#carouselBasicExample"
+      data-mdb-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-mdb-target="#carouselBasicExample"
+      data-mdb-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-mdb-target="#carouselBasicExample"
+      data-mdb-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+
+  <!-- Inner -->
+  <div class="carousel-inner">
+    
+
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <div class="mask" style="background-color:hsla(0, 0%, 0%, 0.6)">
+        <div class="text d-flex justify-content-center align-items-center h-100">
+          <div class="text-center text-white">
+            <h1 class= "mb-4">Welcome</h1>
+            <h2 class="mb-4">We Provide The Best House Keeping Services</h2>
+            <button type="button" class="btn btn-outline-light btn-lg" onclick = "service()"data-mdb-ripple-color="dark">Get The Service Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <div class="mask" style="background-color:hsla(0, 0%, 0%, 0.6)">
+        <div class="text d-flex justify-content-center align-items-center h-100">
+          <div class="text-center text-white">
+            <!-- <h1>Welcome</h1> -->
+            <h2 class="mb-4">We Also Provide The Best Child Care Services</h2>
+            <button type="button" class="btn btn-outline-light btn-lg" data-mdb-ripple-color="dark">Click Here To Get This Service Now</button>
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <div class="mask" style="background-color:hsla(0, 0%, 0%, 0.6)">
+        <div class="text d-flex justify-content-center align-items-center h-100">
+          <div class="text-center text-white">
+            <!-- <h1>Welcome</h1> -->
+            <h2 class="mb-4">We Provide The Best Elderly Care Services</h2>
+            <button type="button" class="btn btn-outline-light btn-lg" data-mdb-ripple-color="dark">Click Here To Get This Service Now</button>
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  <!-- Inner -->
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- Carousel wrapper -->
+    </header>
+    <main>
+      <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModalCenter" onclick="console.log('ModalLAunched')">
+        Apply For Job
+      </button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-mdb-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label class="labs">Name : </label>
+          <input type="text" id="nameMod" tabindex="1" required> <br>
+          <label class="labs">Type : </label>
+          <input type="text" id="typeMod"tabindex="1"> <br>
+          <label class="labs">Location : </label>
+          <input type="text" id="locationMod"tabindex="1"> <br>
+          <label class="labs">Number  : </label>
+          <input type="text" id="numberMod"tabindex="1"> <br>
+          <label class="labs">Age : </label>
+          <input type="text" id="timeMod"tabindex="1"> <br>
+          <label class="labs">Timing : </label>
+          <input type="text" id="ageMod"tabindex="1"> <br>
+          <label class="labs">Salary : </label>
+          <input type="text" id="salaryMod"tabindex="1"> <br>
+          <label for="resFoodImage" class="form-label">Your Image: </label>
+          <input type="file" accept="image/png, image/jpeg" class="form-control shadow-remove borderradius-remove"id="img_mod" aria-describedby="emailHelp">
+
+
+      
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="AddModBtn" type="submit" class="btn btn-primary" onclick="addItem()" type="submit" >Apply For Job</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+      <!-- <button type="button" class="btn btn-primary my-2" data-toggle="modal" data-target="#exampleModalCenter" onclick = "Addnewdata()">New Data</button> -->
+      
+      
+      <!-- <label>Image Name</label> <input type="text" id="namebox">  <label id="extlab"></label> <br><br>
+      <button id="selbtn">Select</button>
+      <button id="upbtn">Upload</button>
+      <button id="downbtn"> retrieve</button>
+      <div class="output_shown">
+        <img id="output" src="" alt="">
+      </div> -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+        </div>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4"></div>
+        </div>
+        
+
+
+
+        <div id="card-container">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+
+        
+          
+        </div>
+
+
+
+      </div>
+
+
+
+
+      
+    </main>
+
+    <footer></footer>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <!--------------------------FIRBASE LIBRARIES-------------------------------------------------->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+    <script type="text/javascript"></script>
+    <script src="index.js"></script>
+    <!-- <script src="index_copy.js"></script> -->
+
+
+  </body>
+</html>
